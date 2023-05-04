@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style.css" rel="stylesheet" type ="text/css"/>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h1>PiZZaRIA</h1>
+    <form>
+      <fieldset>
+        <legend>Customer:</legend>
+        <div class ="row">
+          <div>
+            <label for = "firstname">First</label>
+            <input id = "firstname" name="first_name" type="text">
+          </div>
+          <div>
+            <label for = "Lastname">Last</label>
+            <input id = "Lastname" name= "last_name" type="text">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Flavor:</legend>
+        <div>
+          <div>
+            <input type="radio" id="Cheese" name="Cheese">
+            <label for="Cheese">Cheese</label>
+          </div>
+          <div>
+            <input type="radio" id="OG BBQ Chicken" name="OG_BBQ_Chicken">
+            <label for="OG BBQ Chicken">OG BBQ Chicken</label>
+          </div>
+          <div>
+            <input type="radio" id="Neapolitan" name="Neapolitan">
+            <label for="Neapolitan">Neapolitan</label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="row"> </div>
+      <fieldset>
+        <legend>Toppings:</legend>
+        <div>
+          <div>
+            <input type="Checkbox" id="Pepperoni" name="Pepperoni">
+            <label for="Pepperoni">Pepperoni</label>
+          </div>
+          <div>
+            <input type="Checkbox" id="Olives" name="Olives">
+            <label for="Olives">Olives</label>
+          </div>
+
+          <div>
+            <input type="Checkbox" id="Pineapple" name="Pineapple">
+            <label for="Pineapple">Pineapple</label>
+          </div>
+          <div>
+            <input type="Checkbox" id="Mushroom" name="Mushroom">
+            <label for="Mushroom">Mushroom</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Size:</legend>
+        <div>
+          <div>
+            <input type="radio" id="Small" name="ice cream">
+            <label for="Small">Small</label>
+          </div>
+          <div>
+            <input type="radio" id="medium" name="ice cream">
+            <label for="medium">Medium</label>
+          </div>
+          <div>
+            <input type="radio" id="Large" name="ice cream">
+            <label for="Large">Large</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <button type="button" onclick="alert('free today for our grand opening!')">Calculate Cost</button>
+        <button type="submit">Submit Order</button>
+      </fieldset>
+      <fieldset>
+        <legend>Special:</legend>
+        <label for="SpecialRequests"> Special Requests:</label>
+        <textarea id="SpecialRequests" rows="4" cols="10" placeholder="Allergic to peanuts, substitutions, ect."></textarea>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</body>
+</html>

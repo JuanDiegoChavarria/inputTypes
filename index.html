@@ -9,6 +9,94 @@
 <div class="container">
 <div class="content">
     <h1>ice Cream Shoppe</h1>
+    <form>
+        <fieldset>
+            <legend>Customer:</legend>
+        <div class ="row">
+            <div>
+                <label for = "firstname">First</label>
+                <input id = "firstname" name="first_name" type="text">
+            </div>
+            <div>
+                <label for = "Lastname">Last</label>
+                <input id = "Lastname" name= "last_name" type="text">
+            </div>
+        </div>
+            </fieldset>
+<div class="row"> </div>
+        <fieldset>
+            <legend>Flavor:</legend>
+            <div>
+    <div>
+        <input type="radio" id="vanilla" name="ice cream">
+        <label for="vanilla">Vanilla</label>
+    </div>
+    <div>
+        <input type="radio" id="Strawberry" name="ice_cream">
+        <label for="Strawberry">Strawberry</label>
+    </div>
+    <div>
+        <input type="radio" id="Chocolate" name="ice cream">
+        <label for="Chocolate">Chocolate</label>
+    </div>
+</div>
+        </fieldset>
+        <fieldset>
+            <legend>Size:</legend>
+    <div>
+        <div>
+            <input type="radio" id="Small" name="ice cream">
+            <label for="Small">Small</label>
+        </div>
+        <div>
+            <input type="radio" id="medium" name="ice cream">
+            <label for="medium">Medium</label>
+        </div>
+        <div>
+            <input type="radio" id="Large" name="ice cream">
+            <label for="Large">Large</label>
+        </div>
+    </div>
+        </fieldset>
+        <fieldset>
+            <legend>Toppings:</legend>
+    <div>
+        <div>
+            <input type="Checkbox" id="Sprinkles" name="Sprinkles">
+            <label for="Sprinkles">Sprinkles</label>
+        </div>
+
+        <div>
+            <input type="Checkbox" id="WhippedCream" name="WhippedCream">
+            <label for="WhippedCream">WhippedCream</label>
+        </div>
+
+        <div>
+            <input type="Checkbox" id="Carmel" name="Carmel">
+            <label for="Carmel">Carmel</label>
+        </div>
+    </div>
+        </fieldset>
+        <fieldset>
+            <legend>Cup or cone:</legend>
+        <label for="container"> Please Choose one </label>
+        <select name ="container" id ="container">
+            <option value="cup"> Plastic cup</option>
+            <option value="Sugar"> Sugar cone</option>
+            <option value="Waffle"> Waffle cone</option>
+            <option value="DippedWaffle">Chocolate Dipped Waffle cone</option>
+        </select>
+        </fieldset>
+        <fieldset>
+            <button type="button" onclick="alert('free today for our grand opening!')">Calculate Cost</button>
+            <button type="submit">Submit Order</button>
+        </fieldset>
+        <fieldset>
+            <legend>Special:</legend>
+    <label for="SpecialRequests"> Special Requests:</label>
+    <textarea id="SpecialRequests" rows="4" cols="10" placeholder="Allergic to peanuts, substitutions, ect."></textarea>
+        </fieldset>
+    </form>
 </div>
 </div>
 </body>
