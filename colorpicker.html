@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Title</title>
+    <style>
+        .red{
+            background:red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p> pLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Enim nunc faucibus a pellentesque sit amet. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Varius quam quisque id diam vel quam elementum. Id consectetur purus ut faucibus pulvinar. In eu mi bibendum neque egestas congue quisque egestas. Enim diam vulputate ut pharetra sit. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Donec massa sapien faucibus et. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Viverra vitae congue eu consequat ac. Felis eget velit aliquet sagittis.
+            Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Arcu ac tortor dignissim convallis aenean et tortor at. Urna id volutpat lacus laoreet non curabitur. Est pellentesque elit ullamcorper dignissim. Rutrum tellus pellentesque eu tincidunt tortor. Sit amet nisl purus in mollis nunc sed id semper. Duis at consectetur lorem donec massa sapien faucibus et molestie. Pretium quam vulputate dignissim suspendisse. Pellentesque dignissim enim sit amet venenatis urna cursus eget. Eros donec ac odio tempor orci dapibus ultrices. Consectetur adipiscing elit ut aliquam purus sit. Malesuada fames ac turpis egestas maecenas pharetra convallis. In hac habitasse platea dictumst quisque sagittis purus sit amet. Quis viverra nibh cras pulvinar mattis nunc sed. Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="row">
+            <h3>background</h3>
+            <button id="1">red</button>
+            <button id="2">green</button>
+            <button id="3">blue</button>
+        </div>
+        <div class="row">
+            <h3>background</h3>
+            <button id="4">pink</button>
+            <button id="5">teal</button>
+            <button id="6">purple</button>
+        </div>
+        <button id="clear">Clear</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+
+    const clearButton =document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    })
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    })
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    })
+
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    })
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    })
+    purple.addEventListener('click', function(e){
+        removeTextColor()
+        content.classList.add('purple');
+    })
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor()
+    });
+    function removeBGColor(){
+        content.classList.remove('red');
+
+        content.classList.remove('green');
+
+        content.classList.remove('blue');
+
+    }
+    function removeTextColor(){
+        content.classList.remove('pink');
+
+        content.classList.remove('teal');
+
+        content.classList.remove('purple');
+
+    }
+
+
+
+</script>
+</body>
+</html>
