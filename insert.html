@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>what is this</title>
+    <link rel="stylesheet" href='style.css' type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>what is this</h3>
+        <h4>i don't want this</h4>
+    </div>
+</div>
+<script>
+const content = document.querySelector('.content');
+content.innerHTML = '<h1 id = "gone">I hate school </h1><h4>because its long and stressful</h4>'
+
+const school = document.createElement('h1');
+school.innerHTML = 'I hate school';
+content.appendChild(school);
+const long = document.createElement('h1');
+long.innerHTML = '?';
+content.appendChild(long);
+const hate = document.createElement('h1');
+hate.innerHTML = '!';
+content.appendChild(hate);
+const stressful = document.createElement('h1');
+stressful.innerHTML = 'richie is rainbow';
+content.appendChild(stressful);
+
+const food = document.createElement('h1');
+food.innerHTML = 'I love pizza';
+content.insertAdjacentElement('afterend', food);
+
+const unwantedElement = document.querySelector('h4');
+unwantedElement.remove();
+
+const unwantedElement2 = document.querySelector('.gone');
+unwantedElement2.remove();
+
+</script>
+</body>
+</html>
