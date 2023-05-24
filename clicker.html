@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Clicker</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .unhidden {
+            display: inline-block;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="avatar">
+                <h2 id="pokemon">Pokemon</h2>
+
+                <div class="row">
+                    <div class="ongoingscore">
+                        <h2 id="ongoingscore">EXP: 0</h2>
+                    </div>
+                    <p></p>
+
+                    <button class="button" id="levelup">Click to Evolve</button>
+                </div>
+                <img id="picture" src="https://clipartcraft.com/images/pokemon-clipart-pokeball-2.png" style="width:400px" style="height: 400px">
+
+                <div>
+                    <div class="row">
+                        <button class="button" id="shop">!!!</button>
+                        <h2 class="shopname">Open Shop!</h2>
+                    </div>
+                    <div class="row">
+                        <button class="button" id="x2">x2 Boost (20 EXP)</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button class="button" id="x3">x3 Boost (77 EXP)</button>
+                    </div>
+                </div>
+                <form>
+                    <p></p>
+                    <button id="clear">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const content = document.querySelector('.content');
+    const ongoingscore = document.querySelector('.ongoingscore');
+    let hideshop = document.querySelector('.hidden');
+
+    const click = document.getElementById('levelup');
+    let picture = document.getElementById('picture');
+    let score = document.getElementById('score');
+    const clear = document.getElementById('clear')
+
+
+    score = 0;
+    click.addEventListener('click', function (e) {
+        score++;
+        ongoingscore.innerHTML = `<h2>EXP: ${score}</h2>`
+        if (score >= 100) {
+            pokemon.innerHTML = '<h2>You Have Evolved To Max Level!</h2>'
+            picture.src = "https://pre00.deviantart.net/91c4/th/pre/f/2016/112/4/c/006_mega_charizard_x_by_tzblacktd-d9zwd0t.png"
+        } else if (score >= 45) {
+            picture.src = "https://th.bing.com/th/id/OIP.uGteiGdzWQVu7l6mBfaWoAHaG1?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
+        } else if (score >= 35) {
+            picture.src = "https://img.pokemondb.net/artwork/large/charmeleon.jpg"
+        } else if (score >= 15) {
+            picture.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+        }
+    })
+
+
+    clear.addEventListener('click', function (e){
+        pokemon.innerHTML = '<h2 class="avatar2" id="pokemon">pokemon</h2'
+        score = -0;
+        picture.src = ("https://clipartcraft.com/images/pokemon-clipart-pokeball-2.png")
+    })
+    if (score >= 17) {
+        hideshop = document.getElementById("shop", "shopname").className = "unhidden";
+    } else if (score <= 16) {
+        hideshop = document.getElementById("shop", "shopname").className = "hidden";
+    }
+    hideshop.addEventListener('click', function (e) {
+        score -= 5;
+    })
+
+</script>
+</body>
+</html>

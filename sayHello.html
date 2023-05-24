@@ -2,51 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Say Hello</title>
-    <style>
-        .hidden{
-            display:none;
-        }
-    </style>
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="Container">
-    <div class="Content">
-        <h1>Change content Notes</h1>
+<div class="container">
+    <div class="content">
+        <h3>HELLO</h3>
         <div class="row">
             <div>
                 <label for="first">First Name</label>
-                <input type="text" id="first" name="First_name" placeholder="Jane">
+                <input type="text" id="first" name="first" style="width: 300px;">
             </div>
         </div>
-        <div class="row">
-            <label for="Last">Last Name</label>
-            <input type="text" id="last" name="Last_name" placeholder="Doe">
+        <div>
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="last" style="width: 300px;">
         </div>
-        <button name="sayHello">say Hello</button>
+        <button id="clear">Clear</button>
+        <button id="hello">Hello</button>
+        <div class="text">
+        </div>
         <p></p>
     </div>
+    <script>
+        const text = document.querySelector('.text');
+        const first = document.getElementById('first');
+        const last = document.getElementById('last');
+        const hello = document.getElementById('hello');
+        const clear = document.getElementById('clear')
+
+        hello.addEventListener('click', function(e) {
+            firstName = first.value;
+            lastName = last.value;
+
+            const message = document.createElement('h1');
+            message.innerHTML = `Hello ${firstName} ${lastName}.`;
+            text.insertAdjacentElement('afterbegin', message);
+            first.value = "";
+            last.value = "";
+        });
+
+        clear.addEventListener('click', function(e){
+            first.value = ""
+            last.value = ""
+        })
+    </script>
 </div>
-</div>
-<script>
-    const firstname =document.getElementById('first');
-    const lastname =document.getElementById('last');
-    const full = document.querySelector('p');
-    const helloButton = document.querySelector('[name="sayHello"]');
-
-
-    helloButton.addEventListener('click', function (e){
-        const hello = document.createElement('h1');
-        hello.innerHTML = `hello ${firstname.value} ${lastname.value}`;
-        full.insertAdjacentElement('afterbegin', hello);
-
-        firstname.value = "";
-        lastname.value = "";
-    });
-
-
-
-
-</script>
 </body>
 </html>

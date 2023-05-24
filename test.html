@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donuts</title>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+    <link href="style.css" rel="stylesheet" type ="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Donuts</h1>
+        <form>
+            <fieldset>
+                <div class ="row">
+                    <div>
+                        <label for ="firstname">First Name</label>
+                        <input id ="firstname" name="first_name" type="text" placeholder="Name" style="width: 300px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <label for ="Lastname">Last Name</label>
+                        <input id ="Lastname" name= "last_name" type="text" placeholder="Last" style=" width: 300px">
+                    </div>
+                    <button id="hello">Hello</button>
+                    <button name="clear">Clear</button>
+                    <p class="hidden"></p>
+                </div>
+                <div class="text">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Filled With:</legend>
+                <div>
+                    <div>
+                        <button  class="button" id="apple">apple</button>
+                    </div>
+                    <div>
+                        <button class="button" id="blueberry">blueberry</button>
+                    </div>
+                    <div>
+                        <button class="button" id="chocolate">chocolate</button>
+                    </div>
+                </div>
+
+            </fieldset>
+            
+            <div class="row"></div>
+            <fieldset>
+                <legend>Toppings:</legend>
+                <div>
+                    <div>
+                        <button class="button" id="sprinkles">sprinkles</button>
+                    </div>
+                    <div>
+                        <button class="button" id="cereal">cereal</button>
+                    </div>
+                    <div>
+                        <button class="button" id="coconut">coconut</button>
+                    </div>
+                    <div>
+                        <button class="button" id="glazed">glazed</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                    <div class="ongoingscore">
+                        <h2 id="ongoingscore">COST: 0</h2>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <button type="button" onclick="alert('still calculating')">Calculate Cost</button>
+            </fieldset>
+            <fieldset>
+                <legend>Special:</legend>
+                <label for="SpecialRequests"> Special Requests:</label>
+                <textarea id="SpecialRequests" rows="4" cols="10" placeholder="Allergic to chocolate, coconut, ect..."></textarea>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const first = document.getElementById('first');
+    const last = document.getElementById('last');
+    const hello = document.getElementById('hello');
+    const clear = document.querySelector('clear');
+    const ongoingscore = document.querySelector('.ongoingscore');
+    let cost = document.getElementById('cost');
+
+    hello.addEventListener('click', function(e) {
+        firstName = first.value;
+        lastName = last.value;
+
+        const message = document.createElement('h1');
+        message.innerHTML = `Hello ${firstName} ${lastName}.`;
+        text.insertAdjacentElement('afterbegin', message);
+        first.value = "";
+        last.value = "";
+    });
+
+    clear.addEventListener('click', function(e){
+        first.value = ""
+        last.value = ""
+    })
+
+     cost = 0;
+    click.addEventListener('click', function (e) {
+        cost++;
+        ongoingscore.innerHTML = `<h2>Total:0 ${cost}</h2>`
+    })
+
+
+</script>
+</body>
+</html>
