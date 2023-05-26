@@ -32,19 +32,7 @@
                 </div>
                 <img id="picture" src="https://clipartcraft.com/images/pokemon-clipart-pokeball-2.png" style="width:400px" style="height: 400px">
 
-                <div>
-                    <div class="row">
-                        <button class="button" id="shop">!!!</button>
-                        <h2 class="shopname">Open Shop!</h2>
-                    </div>
-                    <div class="row">
-                        <button class="button" id="x2">x2 Boost (20 EXP)</button>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <button class="button" id="x3">x3 Boost (77 EXP)</button>
-                    </div>
-                </div>
+
                 <form>
                     <p></p>
                     <button id="clear">Reset</button>
@@ -62,7 +50,6 @@
     const click = document.getElementById('levelup');
     let picture = document.getElementById('picture');
     let score = document.getElementById('score');
-    const clear = document.getElementById('clear')
 
 
     score = 0;
@@ -79,21 +66,6 @@
         } else if (score >= 15) {
             picture.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
         }
-    })
-
-
-    clear.addEventListener('click', function (e){
-        pokemon.innerHTML = '<h2 class="avatar2" id="pokemon">pokemon</h2'
-        score = -0;
-        picture.src = ("https://clipartcraft.com/images/pokemon-clipart-pokeball-2.png")
-    })
-    if (score >= 17) {
-        hideshop = document.getElementById("shop", "shopname").className = "unhidden";
-    } else if (score <= 16) {
-        hideshop = document.getElementById("shop", "shopname").className = "hidden";
-    }
-    hideshop.addEventListener('click', function (e) {
-        score -= 5;
     })
 
 </script>
